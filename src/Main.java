@@ -2,10 +2,10 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int ticket = 13686;
-        int mill = 20;
-        int result = ticket / mill;
-        System.out.println(" Начислили " + result + " бонусов ");
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price); // должно получиться 500
+        System.out.println(miles);
 
     }
 }
